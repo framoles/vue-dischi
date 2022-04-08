@@ -1,21 +1,18 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <Main />
+  </div>
 </template>
 
 <script>
+import Main from "./components/Main.vue";
+
 export default {
   name: "App",
-  components: {},
+  components: {
+    Main,
+  },
 };
-const result = [];
-const axios = require("axios").default;
-axios
-  .get("https://flynn.boolean.careers/exercises/api/array/music")
-  .then((resp) => {
-    result.push(resp.data.response);
-  });
-
-console.log(result);
 </script>
 
 <style lang="scss">
